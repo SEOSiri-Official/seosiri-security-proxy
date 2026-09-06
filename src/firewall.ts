@@ -37,7 +37,7 @@ export class EnterpriseThreatEngine {
     const url = new URL(request.url);
 
     // Rule A: MitM & Protocol Security Enforcement (Enforce HTTPS)
-    if (url.protocol !== 'https:' && process.env.NODE_ENV === 'production') {
+    if (url.protocol !== 'https:' && typeof process !== 'undefined' && process.env?.NODE_ENV === 'production') {
       return {
         isBlocked: true,
         threatCategory: 'MitM Vulnerability: Insecure HTTP Protocol',

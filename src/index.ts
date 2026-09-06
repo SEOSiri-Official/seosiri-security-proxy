@@ -13,7 +13,7 @@ export default {
     const url = new URL(request.url);
     const clientIp = request.headers.get('CF-Connecting-IP') || '127.0.0.1';
     const clientAsn = request.cf?.asn ? `ASN: ${request.cf.asn} (${request.cf.asOrganization || 'ISP'})` : 'Unknown Network';
-    const clientCountry = request.cf?.country || 'GLOBAL';
+    const clientCountry = typeof request.cf?.country === 'string' ? request.cf.country : 'GLOBAL';
 
     // 1. DPA Legal Document Route
     if (url.pathname === '/legal/dpa') {
