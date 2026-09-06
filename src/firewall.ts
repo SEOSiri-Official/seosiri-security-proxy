@@ -1,3 +1,4 @@
+declare const process: any;
 export interface ThreatEvaluation {
   isBlocked: boolean;
   threatCategory?: string;
