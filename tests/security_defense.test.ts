@@ -77,3 +77,10 @@ assert(!lapsedStatus.hasActiveSubscription && lapsedStatus.status === 'EXPIRED_H
 console.log("\n==========================================================");
 console.log("  ALL TESTS PASSED: DEFENSE & BILLING PIPELINE CERTIFIED  ");
 console.log("==========================================================");
+// --- TEST 7: Google Token Validator Tests ---
+console.log("\n[7. Authentication: Google Token Validator Engine]");
+import { GoogleIdentityVerifier } from '../src/auth.js';
+
+GoogleIdentityVerifier.verifyToken("invalid.token.structure").then(res => {
+  assert(!res.valid && res.error === 'MALFORMED_JWT_STRUCTURE', "Rejected malformed Google JWT token");
+});
