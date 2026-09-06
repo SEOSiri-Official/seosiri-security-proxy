@@ -1,0 +1,11 @@
+name = "seosiri-security-proxy"
+main = "src/index.ts"
+compatibility_date = "2026-08-25"
+workers_dev = true
+
+routes = [
+  { pattern = "guard.seosiri.com", custom_domain = true }
+]
+
+[vars]
+ALERT_REPO = "SEOSiri-Official/security-logs"

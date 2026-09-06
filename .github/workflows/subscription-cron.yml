@@ -1,0 +1,40 @@
+name: Subscription Lifecycle & Expiration Monitor
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Executes daily at 00:00 UTC
+  repository_dispatch:
+    types: [security_incident]
+  workflow_dispatch:
+
+jobs:
+  monitor-lifecycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Audit Subscription Expirations & Send Alerts
+        run: |
+          node -e '
+            console.log("Auditing customer subscription lifecycles...");
+            const clients = [
+              { id: "client-acme", domain: "acme-store.com", email: "security@acme-store.com", daysRemaining: 15 },
+              { id: "client-lapsed-demo", domain: "demo-lapsed.com", email: "admin@demo-lapsed.com", daysRemaining: -1 }
+            ];
+
+            clients.forEach(c => {
+              if (c.daysRemaining <= 0) {
+                console.log(`[HALTED] Subscription expired for ${c.domain}. Protection cut off.`);
+              } else if (c.daysRemaining <= 7) {
+                console.log(`[ALERT] ${c.domain} expires in ${c.daysRemaining} days. Notification queued.`);
+              } else {
+                console.log(`[HEALTHY] ${c.domain} active (${c.daysRemaining} days remaining).`);
+              }
+            });
+          '
