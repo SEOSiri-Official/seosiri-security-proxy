@@ -22,6 +22,17 @@ export const MONETIZATION_CONFIG = {
 const ACTIVE_ONE_YEAR = Math.floor(Date.now() / 1000) + (365 * 86400);
 
 export const CLIENT_REGISTRY: Record<string, ClientSubscription> = {
+  "client-lapsed-demo": {
+    clientId: "client-lapsed-demo",
+    clientDomain: "demo-lapsed.com",
+    originServerUrl: "https://developers.seosiri.com",
+    alertEmail: "admin@demo-lapsed.com",
+    tier: "STARTER",
+    activeSince: "2026-07-01T00:00:00Z",
+    expiresAtUnix: Math.floor(Date.now() / 1000) - 3600,
+    isActive: true,
+    rateLimitPerMinute: 100
+  },
   // Primary Gateway Profile
   "guard.seosiri.com": {
     clientId: "seosiri-core-gateway",

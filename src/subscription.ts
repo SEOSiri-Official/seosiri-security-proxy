@@ -9,7 +9,15 @@ export interface SubscriptionStatus {
 
 export class SubscriptionLifecycleManager {
   // 1. Evaluates live subscription duration and enforces automated cutoff
-  public static evaluateStatus(subscription: ClientSubscription): SubscriptionStatus {
+  public static evaluateStatus(subscription?: ClientSubscription): SubscriptionStatus {
+    if (!subscription) {
+      return {
+        hasActiveSubscription: false,
+        status: "EXPIRED_HALTED",
+        daysRemaining: 0,
+        message: "No active subscription profile found. Access halted."
+      };
+    }
     const nowUnix = Math.floor(Date.now() / 1000);
     const secondsRemaining = subscription.expiresAtUnix - nowUnix;
     const daysRemaining = Math.ceil(secondsRemaining / 86400);
