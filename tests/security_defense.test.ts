@@ -87,3 +87,19 @@ runTests().catch(err => {
   console.error("Test execution failed:", err);
   process.exit(1);
 });
+
+// --- TEST 8: Mobile Application Security Tests ---
+console.log("\n[8. Mobile Security: Hooking & Anti-Tamper Mitigation]");
+const fridaReq = new Request("https://protected-site.com/api/mobile/login", {
+  headers: { "User-Agent": "Mozilla/5.0 (iPhone; Frida; Debugger)" }
+});
+EnterpriseThreatEngine.inspectRequest(fridaReq).then(res => {
+  assert(res.isBlocked && res.threatCategory?.includes('Mobile Code Tampering'), "Blocked mobile request with Frida hooking signature");
+});
+
+const jailbreakReq = new Request("https://protected-site.com/api/mobile/pay", {
+  headers: { "X-Device-Integrity": "JAILBROKEN" }
+});
+EnterpriseThreatEngine.inspectRequest(jailbreakReq).then(res => {
+  assert(res.isBlocked && res.threatCategory?.includes('Compromised Mobile Device'), "Blocked mobile request from jailbroken device");
+});

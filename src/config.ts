@@ -1,11 +1,13 @@
+// src/config.ts - Enterprise Client Registry & Commercial Pricing Tiers
+
 export interface ClientSubscription {
   clientId: string;
   clientDomain: string;
-  originServerUrl: string; // The client's real backend (WordPress, AWS, Next.js)
+  originServerUrl: string;
   alertEmail: string;
   tier: 'STARTER' | 'PRO' | 'ENTERPRISE';
   activeSince: string;
-  expiresAtUnix: number; // Unix timestamp in seconds
+  expiresAtUnix: number;
   isActive: boolean;
   rateLimitPerMinute: number;
 }
@@ -13,28 +15,42 @@ export interface ClientSubscription {
 export const MONETIZATION_CONFIG = {
   payoneerEmail: "badhan_pbn@yahoo.com",
   portalUrl: "https://developers.seosiri.com",
-  renewalBaseUrl: "https://developers.seosiri.com/key-issuer",
   supportDesk: "info@seosiri.com"
 };
 
-// Client Profiles (Can be populated from KV, D1, or deterministic tokens)
+// 365 Days Active for Primary Gateways (Never accidentally trips 402)
+const ACTIVE_ONE_YEAR = Math.floor(Date.now() / 1000) + (365 * 86400);
+
 export const CLIENT_REGISTRY: Record<string, ClientSubscription> = {
+  // Primary Gateway Profile
+  "guard.seosiri.com": {
+    clientId: "seosiri-core-gateway",
+    clientDomain: "guard.seosiri.com",
+    originServerUrl: "https://developers.seosiri.com",
+    alertEmail: "info@seosiri.com",
+    tier: "ENTERPRISE",
+    activeSince: "2026-08-01T00:00:00Z",
+    expiresAtUnix: ACTIVE_ONE_YEAR,
+    isActive: true,
+    rateLimitPerMinute: 5000
+  },
+  // Enterprise Demo Client
   "client-acme": {
     clientId: "client-acme",
     clientDomain: "acme-store.com",
-    originServerUrl: "https://origin.acme-store.com",
+    originServerUrl: "https://developers.seosiri.com",
     alertEmail: "security@acme-store.com",
     tier: "PRO",
     activeSince: "2026-08-01T00:00:00Z",
-    // Active for 30 days from reference epoch
-    expiresAtUnix: Math.floor(Date.now() / 1000) + (15 * 86400), // 15 Days Remaining
+    expiresAtUnix: ACTIVE_ONE_YEAR,
     isActive: true,
     rateLimitPerMinute: 1000
   },
-  "client-lapsed-demo": {
+  // Simulated Lapsed Demo Account
+  "demo-lapsed.com": {
     clientId: "client-lapsed-demo",
     clientDomain: "demo-lapsed.com",
-    originServerUrl: "https://origin.demo-lapsed.com",
+    originServerUrl: "https://developers.seosiri.com",
     alertEmail: "admin@demo-lapsed.com",
     tier: "STARTER",
     activeSince: "2026-07-01T00:00:00Z",
