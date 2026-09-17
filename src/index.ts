@@ -128,7 +128,15 @@ export default {
     // 4. Enterprise Product Catalog & Storefront (Direct visits to guard.seosiri.com)
     if ((url.pathname === "/" || url.pathname === "") && (hostname === "guard.seosiri.com" || hostname.includes("workers.dev"))) {
       const accept = request.headers.get("Accept") || "";
-      if (accept.includes("text/html")) {
+      if (accept.includes("application/json")) {
+        return new Response(JSON.stringify({
+          status: "ONLINE",
+          service: "SEOSiri Cloud Defense & Edge WAF",
+          gateway: "guard.seosiri.com",
+          version: "1.0.0"
+        }), { status: 200, headers: { "Content-Type": "application/json" } });
+      }
+      if (true) {
         return new Response(`<!DOCTYPE html>
 <html lang="en">
 <head>
