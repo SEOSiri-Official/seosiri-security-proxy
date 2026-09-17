@@ -4,6 +4,23 @@ import { SubscriptionLifecycleManager } from './subscription.js';
 import { ComplianceLegalShield } from './legal.js';
 import { GoogleIdentityVerifier, GitHubAppService } from './auth.js';
 
+// In-Memory Sliding-Window DDoS Rate Limiter
+const IP_REQUEST_CACHE = new Map<string, number[]>();
+
+function checkDdosRateLimit(ip: string, maxRpm: number): { allowed: boolean; remaining: number; resetSeconds: number } {
+  const now = Date.now();
+  const windowMs = 60 * 1000;
+  const timestamps = (IP_REQUEST_CACHE.get(ip) || []).filter(ts => now - ts < windowMs);
+
+  if (timestamps.length >= maxRpm) {
+    return { allowed: false, remaining: 0, resetSeconds: Math.ceil((timestamps[0] + windowMs - now) / 1000) };
+  }
+
+  timestamps.push(now);
+  IP_REQUEST_CACHE.set(ip, timestamps);
+  return { allowed: true, remaining: maxRpm - timestamps.length, resetSeconds: 60 };
+}
+
 export interface Env {
   GITHUB_APP_ID?: string;
   GITHUB_APP_PRIVATE_KEY?: string;
@@ -43,6 +60,28 @@ export default {
       return new Response(JSON.stringify({ status: 'AUTHENTICATED', user: verification.payload?.email }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    // MATCH CLIENT PROFILE BEFORE RATE LIMITING AND FIREWALL
+    const client = CLIENT_REGISTRY[hostname] || CLIENT_REGISTRY['guard.seosiri.com'];
+
+    // 2.5 DDoS & High-Volume Flood Rate Limiter (Enforce client RPM tier)
+    const rateCheck = checkDdosRateLimit(clientIp, client.rateLimitPerMinute);
+    if (!rateCheck.allowed) {
+      return new Response(JSON.stringify({
+        error: "RATE_LIMIT_EXCEEDED",
+        message: `Edge rate limit exceeded (${client.rateLimitPerMinute} RPM cap for ${client.tier} Tier). Retry in ${rateCheck.resetSeconds}s.`,
+        clientDomain: client.clientDomain,
+        renewalDesk: MONETIZATION_CONFIG.payoneerEmail
+      }), {
+        status: 429,
+        headers: {
+          "Content-Type": "application/json",
+          "Retry-After": String(rateCheck.resetSeconds),
+          "X-RateLimit-Limit": String(client.rateLimitPerMinute),
+          "X-RateLimit-Remaining": "0"
+        }
       });
     }
 
@@ -325,10 +364,7 @@ export default {
       }
     }
 
-        // 5. Match Client Profile
-    const client = CLIENT_REGISTRY[hostname] || CLIENT_REGISTRY['guard.seosiri.com'];
-
-    // 6. Automated Subscription Lifecycle Cutoff
+    // 5. Automated Subscription Lifecycle Cutoff
     const subStatus = SubscriptionLifecycleManager.evaluateStatus(client);
     if (!subStatus.hasActiveSubscription) {
       return new Response(SubscriptionLifecycleManager.generateLapsedPage(client.clientDomain), {
@@ -341,7 +377,7 @@ export default {
       });
     }
 
-    // 7. Forward Clean Traffic to Upstream Origin Server
+    // 6. Forward Clean Traffic to Upstream Origin Server
     try {
       const originUrl = new URL(url.pathname + url.search, client.originServerUrl);
       const proxyRequest = new Request(originUrl.toString(), {
