@@ -41,7 +41,7 @@ export const CLIENT_REGISTRY: Record<string, ClientSubscription> = {
     alertEmail: "info@seosiri.com",
     tier: "ENTERPRISE",
     activeSince: "2026-08-01T00:00:00Z",
-    expiresAtUnix: ACTIVE_ONE_YEAR,
+    expiresAtUnix: 2147483647,
     isActive: true,
     rateLimitPerMinute: 5000
   },

@@ -153,7 +153,15 @@ export default {
   <meta name="description" content="Zero-Trust Reverse Proxy &amp; WAF protecting Web, Mobile APIs, and CMS platforms against SQLi, XSS, BOLA, CSRF, and Mobile Code Tampering. Fully compliant with GDPR Recital 49 and CCPA.">
   <link rel="canonical" href="https://guard.seosiri.com/">
 
-  <meta property="og:title" content="SEOSiri Cloud Defense &amp; Threat Mitigation Shield">
+    <meta property="og:title" content="SEOSiri Cloud Defense &amp; Threat Mitigation Shield">
+  <meta property="og:description" content="Autonomous Zero-Trust WAF &amp; Mobile App Security Gateway protecting Web &amp; Mobile APIs against SQLi, XSS, BOLA, and Code Tampering.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/SEOSiri-Official/developers-seosiri-com/main/public/momenul-ahmad.png">
+  <meta property="og:url" content="https://guard.seosiri.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEOSiri Cloud Defense &amp; Threat Mitigation Shield">
+  <meta name="twitter:description" content="Autonomous Edge WAF protecting Web &amp; Mobile APIs with zero code changes.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/SEOSiri-Official/developers-seosiri-com/main/public/momenul-ahmad.png">
   <meta property="og:description" content="Enterprise Zero-Trust WAF &amp; Mobile App Security Gateway protecting APIs with zero code changes.">
   <meta property="og:url" content="https://guard.seosiri.com/">
   <meta property="og:type" content="website">
@@ -333,6 +341,8 @@ export default {
         <li><a href="#mobile">Mobile WAF</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="/manual">Manual</a></li>
+        <li><a href="/manual">Manual</a></li>
         <li><a href="/legal/dpa">Legal DPA</a></li>
         <li><a href="https://developers.seosiri.com/#user-portal" class="nav-cta">Client Dashboard &rarr;</a></li>
       </ul>
@@ -501,7 +511,7 @@ export default {
 
     <!-- Footer Links with rel="nofollow" on Author Name -->
     <div class="footer-links">
-      <a href="/legal/dpa">Data Processing Addendum (DPA)</a> • 
+      <a href="/manual">User Manual</a> • <a href="/manual">User Manual</a> • <a href="/legal/dpa">Data Processing Addendum (DPA)</a> • 
       <a href="/faq">Storefront FAQ</a> • 
       <a href="/sitemap.xml">XML Sitemap</a> • 
       <a href="/llm.txt">/llm.txt Machine Spec</a> • 
