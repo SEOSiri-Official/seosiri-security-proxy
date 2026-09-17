@@ -342,7 +342,6 @@ export default {
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="/manual">Manual</a></li>
-        <li><a href="/manual">Manual</a></li>
         <li><a href="/legal/dpa">Legal DPA</a></li>
         <li><a href="https://developers.seosiri.com/#user-portal" class="nav-cta">Client Dashboard &rarr;</a></li>
       </ul>
