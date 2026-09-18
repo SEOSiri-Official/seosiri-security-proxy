@@ -1,4 +1,4 @@
-// src/storefront.ts - Dedicated Storefront HTML Component for guard.seosiri.com
+// src/storefront.ts - High-Converting Enterprise Storefront for guard.seosiri.com
 import { MONETIZATION_CONFIG } from './config.js';
 
 export function getStorefrontHtml(): string {
@@ -7,18 +7,24 @@ export function getStorefrontHtml(): string {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEOSiri Cloud Defense | Enterprise Web &amp; Mobile App Security Proxy</title>
-  <meta name="description" content="Zero-Trust Reverse Proxy &amp; WAF protecting Web, Mobile APIs, and CMS platforms against SQLi, XSS, BOLA, CSRF, and Mobile Code Tampering. Fully compliant with GDPR Recital 49 and CCPA.">
+  <title>SEOSiri Cloud Defense | Enterprise Web &amp; Mobile App Security Shield</title>
+  <meta name="description" content="Instant zero-code web and mobile API security shield. Protect your business from website downtime, database attacks, and bot scraping while ensuring GDPR and CCPA compliance.">
   <link rel="canonical" href="https://guard.seosiri.com/">
 
+  <!-- Favicons for Users & Mobile Browsers -->
+  <link rel="icon" type="image/svg+xml" href="https://developers.seosiri.com/favicon.svg">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SEOSiri-Official/developers-seosiri-com/main/public/momenul-ahmad.png">
+  <link rel="apple-touch-icon" href="https://developers.seosiri.com/favicon.svg">
+
+  <!-- Open Graph & Social Cards -->
   <meta property="og:title" content="SEOSiri Cloud Defense &amp; Threat Mitigation Shield">
-  <meta property="og:description" content="Enterprise Zero-Trust WAF &amp; Mobile App Security Gateway protecting APIs with zero code changes.">
+  <meta property="og:description" content="Zero-code enterprise security shield protecting your websites, mobile apps, and customer data with zero latency.">
   <meta property="og:image" content="https://raw.githubusercontent.com/SEOSiri-Official/developers-seosiri-com/main/public/momenul-ahmad.png">
   <meta property="og:url" content="https://guard.seosiri.com/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SEOSiri Cloud Defense &amp; Threat Mitigation Shield">
-  <meta name="twitter:description" content="Enterprise Zero-Trust WAF protecting Web &amp; Mobile APIs with zero code changes.">
+  <meta name="twitter:title" content="SEOSiri Cloud Defense &amp; Mobile Security Shield">
+  <meta name="twitter:description" content="Instant edge protection for Web and Mobile APIs with automated regulatory compliance.">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/SEOSiri-Official/developers-seosiri-com/main/public/momenul-ahmad.png">
 
   <!-- AEO, GEO & Multi-Entity JSON-LD Schema -->
@@ -29,9 +35,9 @@ export function getStorefrontHtml(): string {
       {
         "@type": "SoftwareApplication",
         "@id": "https://guard.seosiri.com/#software",
-        "name": "SEOSiri Cloud Defense & Mobile Security Proxy",
+        "name": "SEOSiri Cloud Defense & Security Shield",
         "applicationCategory": "SecurityApplication",
-        "operatingSystem": "Cloudflare Workers Global Edge (V8 Isolates)",
+        "operatingSystem": "Cloudflare Global Edge Network",
         "offers": [
           { "@type": "Offer", "name": "Starter Shield", "price": "29", "priceCurrency": "USD" },
           { "@type": "Offer", "name": "Pro Defense", "price": "99", "priceCurrency": "USD" },
@@ -49,26 +55,26 @@ export function getStorefrontHtml(): string {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How does Method A (DNS / CNAME Proxy) protect my site with zero code modifications?",
+            "name": "How does SEOSiri protect my website without requiring complex developer changes?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You point your domain or API subdomain CNAME to guard.seosiri.com. Traffic hits Cloudflare edge nodes first. Malicious SQL injections, XSS payloads, and BOLA probes are dropped instantly; legitimate traffic is proxied to your origin server with strict HSTS and CSP headers."
+              "text": "You simply point your domain or API address to our edge shield via standard DNS. Our network filters out malicious automated traffic, hacker probes, and abuse before requests reach your servers, keeping your platform online without modifying your existing code."
             }
           },
           {
             "@type": "Question",
-            "name": "How does automated Payoneer activation and subscription duration work?",
+            "name": "How does this reduce our monthly cloud hosting bills and prevent downtime?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Subscriptions settle via Payoneer to badhan_pbn@yahoo.com. Your domain is provisioned within 15 minutes. The proxy checks subscription duration in-memory on every request."
+              "text": "Malicious scrapers and automated vulnerability scans waste significant server CPU, memory, and database bandwidth. By dropping unauthorized traffic at our global edge boundary, your origin servers only process legitimate, revenue-generating customer visits."
             }
           },
           {
             "@type": "Question",
-            "name": "Is reverse proxy inspection compliant with EU GDPR and California CCPA?",
+            "name": "Will adding a security proxy slow down our website or mobile app?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Clean traffic passes through in-memory isolates without logging. Threat data is collected strictly under EU GDPR Recital 49 and CCPA § 1798.145 Legitimate Interest for Network Security with an automated 30-day purge cap."
+              "text": "No. All threat inspection runs in memory across hundreds of global edge data centers in under 10 milliseconds, ensuring your visitors experience fast page loads."
             }
           }
         ]
@@ -96,13 +102,15 @@ export function getStorefrontHtml(): string {
     .header { text-align: center; margin-bottom: 40px; margin-top: 20px; }
     .badge { display: inline-block; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8; font-family: monospace; font-size: 11px; padding: 4px 12px; border-radius: 9999px; font-weight: bold; margin-bottom: 12px; }
     h1 { font-size: 34px; margin: 0 0 12px 0; color: #ffffff; letter-spacing: -0.5px; }
-    .subtitle { font-size: 15px; color: #94a3b8; max-width: 700px; margin: 0 auto; }
+    .subtitle { font-size: 15px; color: #94a3b8; max-width: 720px; margin: 0 auto; }
 
+    /* Value & Productivity Grid */
     .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0; }
     .feature-box { background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 24px; text-align: left; }
     .feature-box h3 { margin-top: 0; font-size: 16px; color: #38bdf8; display: flex; align-items: center; gap: 8px; }
     .feature-box p { font-size: 13px; color: #cbd5e1; margin: 0; }
 
+    /* Pricing Grid */
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; margin: 40px 0; }
     .pricing-card { background: #1e293b; border: 1px solid #334155; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; text-align: left; }
     .pricing-card.featured { border-color: #38bdf8; box-shadow: 0 12px 30px -5px rgba(56, 189, 248, 0.25); position: relative; }
@@ -122,6 +130,7 @@ export function getStorefrontHtml(): string {
     .btn-ent { background: #7c3aed; color: white; }
     .btn-ent:hover { background: #6d28d9; }
 
+    /* Settlement Box */
     .payoneer-box { background: #1e293b; border: 1px solid #475569; border-radius: 20px; padding: 30px; text-align: center; margin-top: 40px; }
     .payoneer-email-container { display: inline-flex; align-items: center; gap: 8px; background: #0f172a; padding: 8px 18px; border-radius: 10px; border: 1px solid #334155; margin: 12px 0; }
     .payoneer-email { font-family: monospace; color: #34d399; font-size: 18px; font-weight: bold; user-select: all; }
@@ -134,6 +143,7 @@ export function getStorefrontHtml(): string {
     .btn-secondary-action { background: #334155; color: #f8fafc; border: 1px solid #475569; }
     .btn-secondary-action:hover { background: #475569; }
 
+    /* Clean FAQ Section */
     .faq-section { margin-top: 60px; text-align: left; }
     .faq-header { text-align: center; margin-bottom: 30px; }
     .faq-grid { display: flex; flex-direction: column; gap: 12px; }
@@ -146,7 +156,7 @@ export function getStorefrontHtml(): string {
     .faq-answer { margin-top: 12px; font-size: 13px; color: #cbd5e1; line-height: 1.6; border-top: 1px solid #334155; padding-top: 10px; }
 
     .footer-links { text-align: center; margin-top: 60px; font-size: 13px; color: #64748b; border-top: 1px solid #334155; padding-top: 30px; }
-    .footer-links a { color: #38bdf8; text-decoration: none; margin: 0 10px; }
+    .footer-links a { color: #38bdf8; text-decoration: none; margin: 0 8px; }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -164,8 +174,8 @@ export function getStorefrontHtml(): string {
         <span class="brand-tag">WAF &amp; PROXY</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#mobile">Mobile WAF</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#mobile">Mobile Protection</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="/manual">Manual</a></li>
@@ -177,34 +187,44 @@ export function getStorefrontHtml(): string {
 
   <div class="container">
     <div class="header">
-      <span class="badge">TLS 1.3 SECURED EDGE REVERSE PROXY &amp; MOBILE WAF</span>
-      <h1>SEOSiri Cloud Defense &amp; Mobile App Security Shield</h1>
-      <p class="subtitle">Autonomous Web Application Firewall and Mobile API Proxy protecting Web, iOS, Android, and CMS backends with zero code modifications.</p>
+      <span class="badge">ZERO-CODE DEPLOYMENT • ENTERPRISE PEACE OF MIND</span>
+      <h1>Autonomous Web &amp; Mobile Application Security Shield</h1>
+      <p class="subtitle">Protect your platforms from downtime, data breaches, and server crashes. Works instantly with WordPress, Shopify, Next.js, and mobile APIs with zero code changes.</p>
     </div>
 
-    <div class="grid-2" id="capabilities">
-      <div class="feature-box" id="mobile">
-        <h3>📱 Mobile Application Defense</h3>
-        <p>Enforces Anti-Tamper &amp; Anti-Hooking (Frida/Xposed blocking), TLS Certificate Pinning support, 60-second sliding-window Nonce replay prevention, and Hardware Keystore / Secure Enclave validation.</p>
+    <!-- High-Impact Business Benefits Grid (Productivity & Sales Intent) -->
+    <div class="grid-2" id="benefits">
+      <div class="feature-box">
+        <h3>⚡ 5-Minute Setup &amp; Zero Developer Overhead</h3>
+        <p>Connect your domain or API through standard DNS in 5 minutes. No complex software installations, code rewrites, or ongoing server maintenance required.</p>
       </div>
       <div class="feature-box">
-        <h3>🌐 Web App &amp; API Security Checklist</h3>
-        <p>Real-time edge mitigation for SQL Injection (SQLi), Cross-Site Scripting (XSS), BOLA/IDOR (Sequential integer blocking with UUID enforcement), and Mass Assignment DTO privilege escalation.</p>
+        <h3>💰 Cut Cloud Hosting Bills &amp; Prevent Outages</h3>
+        <p>Drop abusive bot traffic and automated vulnerability scanners at our global network edge before they consume your server CPU, memory, and database resources.</p>
+      </div>
+      <div class="feature-box" id="mobile">
+        <h3>📱 Complete Mobile App &amp; API Integrity</h3>
+        <p>Protect your iOS and Android mobile backends against fraudulent request replays, reverse engineering attempts, and unauthorized API exploitation.</p>
+      </div>
+      <div class="feature-box">
+        <h3>⚖️ Lawsuit-Proof Enterprise Compliance</h3>
+        <p>Instant coverage under EU GDPR Recital 49 and California CCPA security exemptions. Includes a ready-to-use Data Processing Addendum (DPA) to help you close B2B enterprise deals.</p>
       </div>
     </div>
 
+    <!-- Pricing Grid with Direct Lead Generation CTAs -->
     <div class="pricing-grid" id="pricing">
       <div class="pricing-card">
         <div>
           <div class="plan-name">Starter Shield</div>
           <div class="price">$29 <span>/ month</span></div>
-          <p style="font-size: 13px; color: #94a3b8;">Essential perimeter defense for blogs, SMBs, and single CMS websites.</p>
+          <p style="font-size: 13px; color: #94a3b8;">Complete peace of mind for business websites, stores, and blogs.</p>
           <ul class="features">
-            <li>1 Protected Domain / API</li>
-            <li>SQL Injection (SQLi) Defense</li>
-            <li>Cross-Site Scripting (XSS) Filter</li>
-            <li>Standard Rate Limiting (100 RPM)</li>
-            <li>GDPR &amp; CCPA Lawsuit-Proof DPA</li>
+            <li>1 Protected Domain or API</li>
+            <li>Automated Attack &amp; Exploit Blocking</li>
+            <li>Bot Flood &amp; Traffic Spike Protection</li>
+            <li>Pre-Built GDPR &amp; CCPA Legal Shield</li>
+            <li>Continuous 99.9% Uptime Guarantee</li>
           </ul>
         </div>
         <a href="https://developers.seosiri.com/#pricing" class="card-btn btn-starter">
@@ -213,17 +233,17 @@ export function getStorefrontHtml(): string {
       </div>
 
       <div class="pricing-card featured">
-        <span class="popular-tag">RECOMMENDED</span>
+        <span class="popular-tag">RECOMMENDED FOR SAAS</span>
         <div>
           <div class="plan-name" style="color: #34d399;">Pro Defense</div>
           <div class="price">$99 <span>/ month</span></div>
-          <p style="font-size: 13px; color: #94a3b8;">High-throughput defense for Mobile APIs, SaaS web apps, and e-commerce.</p>
+          <p style="font-size: 13px; color: #94a3b8;">High-throughput protection for web apps, mobile APIs, and stores.</p>
           <ul class="features">
-            <li>Up to 3 Domains &amp; Mobile APIs</li>
-            <li>Mobile Anti-Hooking &amp; Replay Nonce</li>
-            <li>BOLA / IDOR Sequential ID Blocking</li>
-            <li>Mass Assignment DTO Protection</li>
-            <li>5-Minute Real-Time Incident Alerts</li>
+            <li>Up to 3 Domains &amp; Mobile Backends</li>
+            <li>Advanced Mobile API &amp; Anti-Tamper Shield</li>
+            <li>Database Manipulation &amp; Exploit Guard</li>
+            <li>Instant Email Incident Notifications</li>
+            <li>Priority Network Throughput</li>
           </ul>
         </div>
         <a href="https://developers.seosiri.com/#key-issuer" class="card-btn btn-pro">
@@ -235,24 +255,25 @@ export function getStorefrontHtml(): string {
         <div>
           <div class="plan-name" style="color: #c084fc;">Enterprise Custom</div>
           <div class="price">$499 <span>/ month</span></div>
-          <p style="font-size: 13px; color: #94a3b8;">Dedicated Cloudflare Zero Trust setup with custom engineering SLA.</p>
+          <p style="font-size: 13px; color: #94a3b8;">Tailored infrastructure defense with dedicated SLA guarantees.</p>
           <ul class="features">
             <li>Unlimited Web &amp; Mobile Endpoints</li>
-            <li>Dedicated Subdomain (guard.client.com)</li>
-            <li>Hardware Keystore Token Attestation</li>
-            <li>HIPAA &amp; PCI-DSS Audit Reports</li>
-            <li>24/7 Priority Emergency Support</li>
+            <li>Custom Domain Proxying (guard.yourdomain.com)</li>
+            <li>Bespoke Security Rules &amp; Allowlisting</li>
+            <li>Enterprise Compliance Verification Reports</li>
+            <li>24/7 Dedicated Priority Technical Support</li>
           </ul>
         </div>
-        <a href="https://developers.seosiri.com/#custom-mcp" class="card-btn btn-ent" title="Book Enterprise WAF Consultation">
+        <a href="https://developers.seosiri.com/#custom-mcp" class="card-btn btn-ent" title="Book Enterprise Consultation">
           Contact Enterprise Desk &rarr;
         </a>
       </div>
     </div>
 
+    <!-- Direct Settlement Desk -->
     <div class="payoneer-box">
       <h3 style="margin-top:0; color:#ffffff; font-size:18px;">Direct Subscription Settlement Desk</h3>
-      <p style="font-size:13px; color:#cbd5e1; margin-bottom:5px;">To activate active edge protection for your domain or mobile API, submit monthly payment to our verified Payoneer account:</p>
+      <p style="font-size:13px; color:#cbd5e1; margin-bottom:5px;">Activate edge protection for your business by submitting payment to our verified Payoneer account:</p>
       
       <div class="payoneer-email-container">
         <span class="payoneer-email" id="payoneer-addr">${MONETIZATION_CONFIG.payoneerEmail}</span>
@@ -260,7 +281,7 @@ export function getStorefrontHtml(): string {
       </div>
       
       <p style="font-size:12px; color:#94a3b8; max-width:600px; margin: 10px auto;">
-        Include your <strong>Protected Domain</strong> and <strong>Alert Email</strong> in the payment notes. Your edge CNAME configuration will be active within 15 minutes.
+        Include your <strong>Domain Name</strong> and <strong>Notification Email</strong> in the payment notes. Your edge configuration activates within 15 minutes.
       </p>
 
       <div class="settlement-actions">
@@ -276,62 +297,64 @@ export function getStorefrontHtml(): string {
       </div>
     </div>
 
+    <!-- Safe, Business-Focused FAQ (Zero Clues for Hackers) -->
     <section class="faq-section" id="faq">
       <div class="faq-header">
         <span class="badge">FREQUENTLY ASKED QUESTIONS</span>
-        <h2 style="font-size:24px; color:#ffffff; margin:8px 0;">Enterprise Architecture &amp; Deployment FAQ</h2>
-        <p style="font-size:13px; color:#94a3b8;">Everything technical directors, developers, and security auditors need to know.</p>
+        <h2 style="font-size:24px; color:#ffffff; margin:8px 0;">Frequently Asked Questions</h2>
+        <p style="font-size:13px; color:#94a3b8;">Clear answers on how SEOSiri protects your business, team, and revenue.</p>
       </div>
 
       <div class="faq-grid">
         <details open>
-          <summary>How does Method A (DNS / CNAME Proxy) protect my site with zero code modifications?</summary>
+          <summary>How does SEOSiri protect my website without requiring complex developer changes?</summary>
           <div class="faq-answer">
-            You point your domain or API subdomain CNAME (e.g. <code>api.yourdomain.com</code>) to <code>guard.seosiri.com</code>. Incoming traffic routes through Cloudflare global edge nodes before reaching your server. Malicious SQL injections, XSS payloads, and BOLA/IDOR probes are intercepted and dropped at the edge. Legitimate traffic is proxied transparently to your origin server with strict HSTS and CSP headers injected automatically.
+            You simply route your domain or API subdomain traffic through our edge proxy using standard DNS settings. We inspect incoming traffic, block malicious attacks, and forward clean customer requests directly to your servers with zero code modifications needed.
           </div>
         </details>
 
         <details>
-          <summary>How does automated Payoneer activation and subscription duration work?</summary>
+          <summary>How does this reduce our monthly cloud hosting bills and prevent downtime?</summary>
           <div class="faq-answer">
-            Subscriptions are settled via Payoneer to <code>badhan_pbn@yahoo.com</code>. Your domain profile is provisioned with its active expiration timestamp. The proxy checks subscription duration in-memory on every request. If a subscription lapses, a graceful suspension notice is served (HTTP 402) rather than exposing an unprotected backend to the open internet.
+            Malicious scrapers, brute-force bots, and automated vulnerability scanners waste significant server CPU, memory, and database bandwidth. By dropping bad traffic at our global edge boundary, your servers only spend resources processing legitimate, paying customer visits.
           </div>
         </details>
 
         <details>
-          <summary>Will the reverse proxy add latency to my website or mobile API?</summary>
+          <summary>Will adding a security shield slow down our website or mobile app?</summary>
           <div class="faq-answer">
-            No. SEOSiri operates on Cloudflare Workers V8 memory isolates deployed across 330+ edge locations worldwide. Threat inspection, regular expression scanning, and rate limiting occur in-memory with sub-10ms global latency.
+            No. Our proxy operates entirely in memory across hundreds of edge data centers worldwide. Inspection occurs in under 10 milliseconds, ensuring your visitors experience fast page loads.
           </div>
         </details>
 
         <details>
-          <summary>How does SEOSiri protect Mobile Phone Applications (iOS and Android)?</summary>
+          <summary>How does SEOSiri protect iOS and Android mobile app backends?</summary>
           <div class="faq-answer">
-            The gateway inspects mobile API traffic for unauthorized runtime instrumentation, rejects traffic from compromised or modified operating environments, enforces cryptographic anti-replay nonce tracking, and verifies hardware-backed device attestation tokens.
+            Mobile APIs are often targeted by automated scripts and reverse-engineering tools. SEOSiri verifies the integrity of mobile requests, prevents fraudulent transaction replays, and blocks unauthorized automated bots from abusing your backend data.
           </div>
         </details>
 
         <details>
-          <summary>Is reverse proxy inspection compliant with EU GDPR and California CCPA?</summary>
+          <summary>Is our data and customer traffic compliant with privacy regulations?</summary>
           <div class="faq-answer">
-            Yes. Clean traffic passes through in-memory isolates with zero persistent logging. Threat telemetry is captured strictly under <strong>EU GDPR Recital 49 &amp; Art. 6(1)(f)</strong> and <strong>CCPA § 1798.145</strong> under Legitimate Interest for Network Security, bounded by an automated 30-day purge cap. Read our full <a href="/legal/dpa" style="color:#38bdf8;">Data Processing Addendum (DPA)</a>.
+            Yes. All legitimate traffic passes through in-memory isolates without persistent logging. Threat metadata is captured strictly under <strong>EU GDPR Recital 49 &amp; Art. 6(1)(f)</strong> and <strong>CCPA § 1798.145</strong> to preserve network security with an automated 30-day purge cap. Read our full <a href="/legal/dpa" style="color:#38bdf8;">Data Processing Addendum (DPA)</a>.
           </div>
         </details>
 
         <details>
-          <summary>How are security alerts dispatched when an attack occurs?</summary>
+          <summary>How quickly can my website or mobile API be protected?</summary>
           <div class="faq-answer">
-            When a threat is intercepted, the edge proxy generates an isolated, out-of-band security event dispatch, routing real-time forensic telemetry (attacker IP, network ASN, threat classification) directly to the designated security administration desk without exposing origin server topology.
+            Setup takes less than 5 minutes. As soon as you update your DNS or point your API endpoint to our edge proxy, active defense begins immediately.
           </div>
         </details>
       </div>
     </section>
 
+    <!-- Clean Footer with Smooth Anchor Links & rel="nofollow" -->
     <div class="footer-links">
       <a href="/manual">User Manual</a> • 
       <a href="/legal/dpa">Data Processing Addendum (DPA)</a> • 
-      <a href="/faq">Storefront FAQ</a> • 
+      <a href="#faq">Frequently Asked Questions</a> • 
       <a href="/sitemap.xml">XML Sitemap</a> • 
       <a href="/llm.txt">/llm.txt Machine Spec</a> • 
       <a href="https://developers.seosiri.com/">SEOSiri Developer Portal</a> • 
