@@ -308,7 +308,7 @@ export function getStorefrontHtml(): string {
         <details>
           <summary>How does SEOSiri protect Mobile Phone Applications (iOS and Android)?</summary>
           <div class="faq-answer">
-            The gateway blocks requests originating from mobile dynamic instrumentation frameworks (Frida, Xposed, Cydia, Substrate), rejects traffic from flagged rooted/jailbroken devices, enforces 60-second sliding-window replay nonces, and verifies hardware keystore tokens.
+            The gateway inspects mobile API traffic for unauthorized runtime instrumentation, rejects traffic from compromised or modified operating environments, enforces cryptographic anti-replay nonce tracking, and verifies hardware-backed device attestation tokens.
           </div>
         </details>
 
@@ -322,7 +322,7 @@ export function getStorefrontHtml(): string {
         <details>
           <summary>How are security alerts dispatched when an attack occurs?</summary>
           <div class="faq-answer">
-            When a threat is intercepted, the Worker generates a background out-of-band dispatch to GitHub Actions via RS256 JWT authentication, triggering an instant incident email to your designated admin email with the attacker IP, network ASN, and payload forensic signature.
+            When a threat is intercepted, the edge proxy generates an isolated, out-of-band security event dispatch, routing real-time forensic telemetry (attacker IP, network ASN, threat classification) directly to the designated security administration desk without exposing origin server topology.
           </div>
         </details>
       </div>

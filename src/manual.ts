@@ -42,7 +42,7 @@ Host: guard.seosiri.com
 X-App-Platform: iOS
 X-App-Timestamp: 1788700000
 X-App-Nonce: nonce_unique_random_9918
-X-Device-Integrity: SECURE_ENCLAVE</pre>
+X-Device-Attestation: [SIGNED_HARDWARE_TOKEN]</pre>
 
     <h2>Automated Billing &amp; Subscription Cutoff</h2>
     <p>Subscriptions settle via Payoneer to <code>badhan_pbn@yahoo.com</code>. Pro accounts ($99/mo) receive a 7-day warning header <code>X-SEOSiri-Subscription-Warning</code> prior to expiration, preventing abrupt traffic cutoffs.</p>
