@@ -244,7 +244,7 @@ export function getStorefrontHtml(): string {
             <li>24/7 Priority Emergency Support</li>
           </ul>
         </div>
-        <a href="mailto:info@seosiri.com?subject=Enterprise%20Security%20Proxy%20Consultation" class="card-btn btn-ent">
+        <a href="https://developers.seosiri.com/#custom-mcp" class="card-btn btn-ent" title="Book Enterprise WAF Consultation">
           Contact Enterprise Desk &rarr;
         </a>
       </div>
