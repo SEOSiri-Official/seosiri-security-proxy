@@ -181,7 +181,6 @@ export function getStorefrontHtml(): string {
         <li><a href="#mobile">Mobile Protection</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="/manual">Manual</a></li>
         <li><a href="/legal/dpa">Legal DPA</a></li>
         <li><a href="https://developers.seosiri.com/#user-portal" class="nav-cta">Client Dashboard &rarr;</a></li>
       </ul>
@@ -192,10 +191,10 @@ export function getStorefrontHtml(): string {
     <div class="header">
       <span class="badge">ZERO-CODE DEPLOYMENT • ENTERPRISE PEACE OF MIND</span>
       <h1>Autonomous Web &amp; Mobile Application Security Shield</h1>
-      <p class="subtitle">Protect your platforms from downtime, data breaches, and server crashes. Works instantly with WordPress, Shopify, Next.js, and mobile APIs with zero code changes.</p>
+      <p class="subtitle">Protect your platforms from downtime, data breaches, and server crashes. Works instantly with WordPress, Shopify, Webflow, Wix, Square, Next.js, and mobile APIs with zero code changes.</p>
     </div>
 
-    <!-- High-Impact Business Benefits Grid (Productivity & Sales Intent) -->
+    <!-- High-Impact Business Benefits Grid -->
     <div class="grid-2" id="benefits">
       <div class="feature-box">
         <h3>⚡ 5-Minute Setup &amp; Zero Developer Overhead</h3>
@@ -288,19 +287,19 @@ export function getStorefrontHtml(): string {
       </p>
 
       <div class="settlement-actions">
-        <a href="https://developers.seosiri.com/#key-issuer?plan=pro" class="btn-action btn-primary-action">
+        <a href="https://developers.seosiri.com/#key-issuer" class="btn-action btn-primary-action">
           🔑 Generate Scoped License Key &rarr;
         </a>
         <a href="https://developers.seosiri.com/#user-portal" class="btn-action btn-secondary-action">
           👤 Client Security Dashboard
         </a>
-        <a href="https://developers.seosiri.com/#key-issuer?plan=starter" class="btn-action btn-secondary-action">
+        <a href="https://developers.seosiri.com/#pricing" class="btn-action btn-secondary-action">
           📊 Compare All 20 API Packages
         </a>
       </div>
     </div>
 
-    <!-- Safe, Business-Focused FAQ (Zero Clues for Hackers) -->
+    <!-- Safe, Business-Focused FAQ -->
     <section class="faq-section" id="faq">
       <div class="faq-header">
         <span class="badge">BUSINESS VALUE &amp; ROI</span>
@@ -346,9 +345,8 @@ export function getStorefrontHtml(): string {
       </div>
     </section>
 
-    <!-- Clean Footer with Smooth Anchor Links & rel="nofollow" -->
+    <!-- Clean Footer with rel="nofollow" -->
     <div class="footer-links">
-      <a href="/manual">User Manual</a> • 
       <a href="/legal/dpa">Data Processing Addendum (DPA)</a> • 
       <a href="#faq">Frequently Asked Questions</a> • 
       <a href="/sitemap.xml">XML Sitemap</a> • 
@@ -361,21 +359,6 @@ export function getStorefrontHtml(): string {
       </p>
     </div>
   </div>
-
-  <script>
-    function copyPayoneer() {
-      const email = document.getElementById("payoneer-addr").innerText;
-      navigator.clipboard.writeText(email).then(() => {
-        const btn = document.getElementById("copy-btn");
-        btn.innerText = "Copied!";
-        btn.style.background = "#059669";
-        setTimeout(() => {
-          btn.innerText = "Copy";
-          btn.style.background = "#334155";
-        }, 2000);
-      });
-    }
-  </script>
 </body>
 </html>`;
 }
