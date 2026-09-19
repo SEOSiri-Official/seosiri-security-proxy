@@ -10,6 +10,9 @@ export function getStorefrontHtml(): string {
   <title>SEOSiri Cloud Defense | Enterprise Web &amp; Mobile App Security Shield</title>
   <meta name="description" content="Instant zero-code web and mobile API security shield. Protect your business from website downtime, database attacks, and bot scraping while ensuring GDPR and CCPA compliance.">
   <link rel="canonical" href="https://guard.seosiri.com/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
 
   <!-- Favicons for Users & Mobile Browsers -->
   <link rel="icon" type="image/svg+xml" href="https://developers.seosiri.com/favicon.svg">
@@ -227,7 +230,7 @@ export function getStorefrontHtml(): string {
             <li>Continuous 99.9% Uptime Guarantee</li>
           </ul>
         </div>
-        <a href="https://developers.seosiri.com/#pricing" class="card-btn btn-starter">
+        <a href="https://developers.seosiri.com/#key-issuer?plan=starter" class="card-btn btn-starter">
           Deploy Starter Shield &rarr;
         </a>
       </div>
@@ -246,7 +249,7 @@ export function getStorefrontHtml(): string {
             <li>Priority Network Throughput</li>
           </ul>
         </div>
-        <a href="https://developers.seosiri.com/#key-issuer" class="card-btn btn-pro">
+        <a href="https://developers.seosiri.com/#key-issuer?plan=pro" class="card-btn btn-pro">
           Issue Pro License Key &rarr;
         </a>
       </div>
@@ -264,7 +267,7 @@ export function getStorefrontHtml(): string {
             <li>24/7 Dedicated Priority Technical Support</li>
           </ul>
         </div>
-        <a href="https://developers.seosiri.com/#custom-mcp" class="card-btn btn-ent" title="Book Enterprise Consultation">
+        <a href="https://developers.seosiri.com/#key-issuer?plan=enterprise" class="card-btn btn-ent" title="Book Enterprise Consultation">
           Contact Enterprise Desk &rarr;
         </a>
       </div>
@@ -285,13 +288,13 @@ export function getStorefrontHtml(): string {
       </p>
 
       <div class="settlement-actions">
-        <a href="https://developers.seosiri.com/#key-issuer" class="btn-action btn-primary-action">
+        <a href="https://developers.seosiri.com/#key-issuer?plan=pro" class="btn-action btn-primary-action">
           🔑 Generate Scoped License Key &rarr;
         </a>
         <a href="https://developers.seosiri.com/#user-portal" class="btn-action btn-secondary-action">
           👤 Client Security Dashboard
         </a>
-        <a href="https://developers.seosiri.com/#pricing" class="btn-action btn-secondary-action">
+        <a href="https://developers.seosiri.com/#key-issuer?plan=starter" class="btn-action btn-secondary-action">
           📊 Compare All 20 API Packages
         </a>
       </div>
@@ -300,51 +303,44 @@ export function getStorefrontHtml(): string {
     <!-- Safe, Business-Focused FAQ (Zero Clues for Hackers) -->
     <section class="faq-section" id="faq">
       <div class="faq-header">
-        <span class="badge">FREQUENTLY ASKED QUESTIONS</span>
-        <h2 style="font-size:24px; color:#ffffff; margin:8px 0;">Frequently Asked Questions</h2>
-        <p style="font-size:13px; color:#94a3b8;">Clear answers on how SEOSiri protects your business, team, and revenue.</p>
+        <span class="badge">BUSINESS VALUE &amp; ROI</span>
+        <h2 style="font-size:24px; color:#ffffff; margin:8px 0;">Enterprise Protection &amp; Productivity FAQ</h2>
+        <p style="font-size:13px; color:#94a3b8;">How SEOSiri Cloud Defense cuts operational costs, saves engineering hours, and prevents business disruption.</p>
       </div>
 
       <div class="faq-grid">
         <details open>
-          <summary>How does SEOSiri protect my website without requiring complex developer changes?</summary>
+          <summary>How does SEOSiri Cloud Defense reduce monthly infrastructure and engineering costs?</summary>
           <div class="faq-answer">
-            You simply route your domain or API subdomain traffic through our edge proxy using standard DNS settings. We inspect incoming traffic, block malicious attacks, and forward clean customer requests directly to your servers with zero code modifications needed.
+            Traditional security setups require purchasing separate services for Web Application Firewalls ($200–$500/mo), bot mitigation tools ($150–$300/mo), and mobile API monitoring, plus weeks of developer time writing custom input validation. SEOSiri consolidates these capabilities at the network edge for a fraction of the cost, saving teams an average of $600 to $2,500+ every month with zero maintenance overhead.
           </div>
         </details>
 
         <details>
-          <summary>How does this reduce our monthly cloud hosting bills and prevent downtime?</summary>
+          <summary>How quickly can our website or mobile API be secured without downtime?</summary>
           <div class="faq-answer">
-            Malicious scrapers, brute-force bots, and automated vulnerability scanners waste significant server CPU, memory, and database bandwidth. By dropping bad traffic at our global edge boundary, your servers only spend resources processing legitimate, paying customer visits.
+            Setup takes less than 15 minutes. By routing your domain or API subdomain through SEOSiri via a simple DNS CNAME, protection activates immediately with zero server restarts, zero code refactoring, and zero risk to live production traffic.
           </div>
         </details>
 
         <details>
-          <summary>Will adding a security shield slow down our website or mobile app?</summary>
+          <summary>How does this protect our business from revenue loss and automated bot abuse?</summary>
           <div class="faq-answer">
-            No. Our proxy operates entirely in memory across hundreds of edge data centers worldwide. Inspection occurs in under 10 milliseconds, ensuring your visitors experience fast page loads.
+            Automated crawlers, content scrapers, and malicious bots exhaust server CPU, inflate cloud hosting bills, and degrade checkout performance for real customers. SEOSiri intercepts automated exploitation attempts at global edge nodes before they ever reach your origin servers, preserving uptime and database capacity for paying users.
           </div>
         </details>
 
         <details>
-          <summary>How does SEOSiri protect iOS and Android mobile app backends?</summary>
+          <summary>How does zero-retention edge processing protect our company from privacy fines?</summary>
           <div class="faq-answer">
-            Mobile APIs are often targeted by automated scripts and reverse-engineering tools. SEOSiri verifies the integrity of mobile requests, prevents fraudulent transaction replays, and blocks unauthorized automated bots from abusing your backend data.
+            Storing end-user data creates liability under GDPR, CCPA, and global privacy mandates. SEOSiri operates in-memory with strict zero-log non-retention for legitimate traffic. Clean requests pass through without disk persistence, insulating your organization from data breach exposure and regulatory penalties.
           </div>
         </details>
 
         <details>
-          <summary>Is our data and customer traffic compliant with privacy regulations?</summary>
+          <summary>How does the automated Payoneer checkout and license delivery work?</summary>
           <div class="faq-answer">
-            Yes. All legitimate traffic passes through in-memory isolates without persistent logging. Threat metadata is captured strictly under <strong>EU GDPR Recital 49 &amp; Art. 6(1)(f)</strong> and <strong>CCPA § 1798.145</strong> to preserve network security with an automated 30-day purge cap. Read our full <a href="/legal/dpa" style="color:#38bdf8;">Data Processing Addendum (DPA)</a>.
-          </div>
-        </details>
-
-        <details>
-          <summary>How quickly can my website or mobile API be protected?</summary>
-          <div class="faq-answer">
-            Setup takes less than 5 minutes. As soon as you update your DNS or point your API endpoint to our edge proxy, active defense begins immediately.
+            Choose your plan (Starter $29, Pro $99, or Enterprise $499) and submit payment to <code>badhan_pbn@yahoo.com</code> via Payoneer. Our systems team provisions your custom domain gateway and delivers your cryptographic access key within 15 minutes.
           </div>
         </details>
       </div>
