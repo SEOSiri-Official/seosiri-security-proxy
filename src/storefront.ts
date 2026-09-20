@@ -348,6 +348,7 @@ export function getStorefrontHtml(): string {
     <!-- Clean Footer with rel="nofollow" -->
     <div class="footer-links">
       <a href="/legal/dpa">Data Processing Addendum (DPA)</a> • 
+      <a href="/manual">Setup Manual &amp; Docs</a> • 
       <a href="#faq">Frequently Asked Questions</a> • 
       <a href="/sitemap.xml">XML Sitemap</a> • 
       <a href="/llm.txt">/llm.txt Machine Spec</a> • 
