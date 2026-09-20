@@ -359,6 +359,18 @@ export function getStorefrontHtml(): string {
       </p>
     </div>
   </div>
+
+  <script>
+    function copyPayoneer() {
+      const email = document.getElementById("payoneer-addr").innerText.trim();
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById("copy-btn");
+        btn.innerText = "Copied!";
+        setTimeout(() => { btn.innerText = "Copy"; }, 2000);
+      });
+    }
+  </script>
 </body>
+
 </html>`;
 }
